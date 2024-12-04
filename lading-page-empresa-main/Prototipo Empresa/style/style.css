@@ -1,0 +1,170 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    background-color: aliceblue;
+}
+
+#cabecalho {
+    background-color: black;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.FontSize {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-flow: row nowrap;
+    gap: 20px; 
+}
+
+.botaoFontSize{
+    padding: 7px;
+    border-radius: 5px;
+    border: none;
+    background-color: aliceblue;
+}
+
+.botaoFontSize:hover {
+    background-color: rgb(212, 218, 223);
+    transition: all 0.5s;
+    transform: translateY(-3px);
+}
+
+#main {
+    height: 81.8vh;
+    width: 85vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+    gap: 40px;
+    
+}
+
+#sobre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    gap: 20px;
+    letter-spacing: 1px;
+    background-color: aqua;
+    padding: 15px;
+    border-radius: 7px;
+    margin-bottom: 20px;
+    min-width: 300px;
+    min-height: 32%;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.172);
+}
+
+#sobre h2 {
+    text-align: center;
+    padding: 10px;
+}
+
+#sobre p {
+    line-height: 25px;
+}
+
+#produtos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    gap: 7px;
+    letter-spacing: 1px;
+    background-color: aqua;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 7px;
+    min-width: 300px;
+    min-height: 32%;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.172);
+}
+
+#produtos h2 {
+    text-align: center;
+    padding: 10px;
+}
+
+#produtos p {
+    line-height: 25px;
+
+}
+
+.linkAncora {
+    color: white;
+    text-decoration: none;
+    background-color: black;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 13px;
+    animation: button 3s ease infinite;
+}
+
+.linkAncora:hover {
+    transform: translateY(-3px);
+    transition: all 0.5s;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.274);
+}
+
+#containRedesSociais{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.linkAncoraRedesSociais {
+    color: white;
+    text-decoration: none;
+    background-color: black;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+
+.linkAncoraRedesSociais:hover {
+    color: black;
+    background-color: white;
+    transform: translateY(-3px);
+    transition: all 0.5s;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.288);
+}
+
+.RedesSociais{
+    width: 15px;
+    margin-right: 3px;
+}
+
+@keyframes button {
+    0%{
+        background-color: black;
+    }
+    50% {
+        background-color: rgb(140, 139, 139);
+    }
+    100% {
+        background-color: black;
+    }
+}
+
+#rodape {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    gap: 10px;
+    background-color: gray;
+    padding: 15px;
+    text-align: center;
+}
