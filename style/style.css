@@ -36,9 +36,9 @@ html {
     scroll-behavior: smooth;
 }
 
-html, body {
+ html, body {
    overflow-x: hidden;
-}
+} 
 
 
 body{
@@ -115,6 +115,13 @@ nav.NavegationBar > a {
     font-style: normal;
 }
 
+nav.NavegationBar > a:hover{
+    background-color: #ffffff5a;
+    border: 1px solid var(--Destaque);
+    transition: all 0.5s;
+    transform: translateY(-3px);
+}
+
 
 .FontSize {
     display: flex;
@@ -141,6 +148,7 @@ nav.NavegationBar > a {
     background-color: #ffffff64;
     transition: all 0.5s;
     transform: translateY(-3px);
+    border: 1px solid var(--Destaque);
 }
 
 #main {
@@ -770,6 +778,7 @@ div.fastLinks {
     flex:1;
 }
 
+
 div.fastLinks > a {
     text-decoration: none;
     color: #FFFFFF;
@@ -782,6 +791,11 @@ div.fastLinks > a {
     font-family: "Nunito", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
+}
+
+div.fastLinks > a:hover{
+    border: 2px solid var(--Destaque);
+    background-color: #ffffff2e;
 }
 
 div#Contato {
@@ -827,7 +841,7 @@ a.linkAncoraRedesSociais:hover{
     background-color: #ffffff5a;
     transition: all 0.6s;
     border-radius: 5px;
-    border: 2px solid white;
+    border: 1px solid white;
     padding: 7px;
     transform: translateY(-3px);
 }
@@ -836,9 +850,8 @@ img.RedesSociais{
     width: 30px;
 }
 
-
 p.Copy{
-    width: 100vw;
+    width: 100%;
     padding: 10px;
     font-size: 20px;
     background-color: var(--rodapeECabeçalho);
