@@ -1,8 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Passion+One:wght@400;700;900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sriracha&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Passion+One:wght@400;700;900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sriracha&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Passion+One:wght@400;700;900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sriracha&display=swap');
+
+
 * {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: sans-serif;
 }
 
 :root {
@@ -11,6 +18,22 @@
     --terciaryColor: #8C6542;
     --quartearyColor: #8C4F04;
     --fontColor: #F9F9F9;
+}
+
+:root {
+    --fundoPrincipal: #E5E5E5;
+    --rodapeECabeçalho: #000000;
+    --texto: #FFFFFf;
+    --Destaque: #D4AF37;
+    --FundoBotao: #D4AF37;
+    --HoverBotao: #E8C878;
+    --CardsFundo: #FFFFFF;
+    --BordaCards:  #D4AF37;
+    --textoCards: #6D6D6D;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 html, body {
@@ -22,6 +45,7 @@ body{
     overflow: auto;
     min-height: 100vh;
     width: 100vw;
+    background-color: var(--fundoPrincipal);
 }
 
 main {
@@ -33,11 +57,47 @@ header#cabecalho {
     justify-content: space-around;
     align-items: center;
     width: 100vw;
-    background-color: var(--secundaryColor);
-    color: var(--fontColor);
+    background-color: #000000;
+    color: var(--texto);
     padding: 15px;
     text-align: center;
 }
+
+img.logo-image{
+    background-image: url(/images/Logo-png.png);
+    width: 150px;
+    height: 150px;
+}
+
+h1{
+    font-family: "Cinzel Decorative", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--BordaCards);
+}
+
+.efeito-texto-topo{
+    visibility: hidden;
+}
+
+.efeito-imagem-topo{
+    visibility: hidden;
+}
+
+.efeito-card1, .efeito-card2,.efeito-card3, .efeito-card4, .efeito-card5{
+    visibility: hidden;
+}
+
+.fontSpecial{
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.efeito-texto-sobre,.efeito-imagem-sobre{
+    visibility: hidden;
+}
+
 
 nav.NavegationBar{
     display: flex;
@@ -46,8 +106,16 @@ nav.NavegationBar{
 
 nav.NavegationBar > a {
     text-decoration: none;
-    color: var(--fontColor);
+    color: var(--texto);
+    border: 1px solid var(--texto);
+    padding: 7px;
+    border-radius: 5px;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
+
+
 .FontSize {
     display: flex;
     justify-content: flex-end;
@@ -61,13 +129,16 @@ nav.NavegationBar > a {
     border-radius: 5px;
     border: none;
     font-size: 0.9em;
-    border: 2px solid var(--fontColor);
-    background-color: var(--secundaryColor);
-    color: var(--fontColor);
+    border: 2px solid var(--fundoPrincipal);
+    background-color: var(--rodapeECabeçalho);
+    color: var(--texto);
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 
 .botaoFontSize:hover {
-    background-color: rgba(212, 218, 223, 0.477);
+    background-color: #ffffff64;
     transition: all 0.5s;
     transform: translateY(-3px);
 }
@@ -82,26 +153,95 @@ nav.NavegationBar > a {
     margin: auto;
 }
 
-div.Home{
+div#Home{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: column nowrap;
     gap: 15px;
     border-radius: 3px;
-    width: 100%;
-    height: 400px;
-    background-color: var(--primaryColor);
+    width: 100vw;
+    min-height: 100vh;
+    background-color: var(--rodapeECabeçalho);
     color: var(--fontColor);
 }
 
-div.Home,h1{
+div.texto-animado{
+    font-size: 2.5em;
+    font-weight: 300;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+div.texto-animado span{
+    position: relative;
+}
+
+div.texto-animado span::before{
+    content: "";
+    color: var(--FundoBotao);
+    animation: WritingAnimation 20s infinite;
+}
+
+
+div.texto-animado span::after{
+    content: "";
+    position: absolute;
+    height: 110%;
+    right: -10px;
+    opacity: 1;
+    width: calc(100% + 13px);
+    background-color: var(--rodapeECabeçalho);
+    animation: cursor 0.8s infinite, Writing 20s steps(15) infinite;
+}
+
+@keyframes Writing{
+    10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+        width: 0;
+    }
+    5%,20%,25%,40%,45%,60%,65%,80%,85%{
+        width: calc(100% + 13px);
+    }
+}
+
+@keyframes cursor{
+    0%{
+        border-left: 2px solid var(--texto);
+    }
+}
+
+
+@keyframes WritingAnimation{
+    0%,20%{
+        content: "Resistente e Durável";
+    }
+    21%,40%{
+        content: "Elegância Atemporal";
+    }
+    41%, 60%{
+        content: "Conforto Ergonômico";
+    }
+    61%, 80%{
+        content: "Versatilidade Estilosa";
+    }
+    81%, 100%{
+        content: "Exclusividade Premium";
+    }
+}
+
+div#Home,h1{
     font-size: 1.5em;
 }
 
-h2.imoveisH2{
+h1.imoveisH1{
     position: absolute;
-    top: 52%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 120%;
+    z-index: 1;
+    width: 100%;
 }
 section> h2{
     display: flex;
@@ -121,15 +261,17 @@ div#imoveisDestaque{
     border-radius: 7px;
     margin: 2px;
     padding: 20px;
-    width: 95%;
-    height: 600px;
-    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.172);
+    min-width: 100vw;
+    min-height: 90vh;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.162);
     color: var(--primaryColor);
 }
 
 div.card{
+    position: relative;
     display: flex;
-    flex-grow: 1;
+    background-color: var(--CardsFundo);
+    color: var(--rodapeECabeçalho);
     text-align: center;
     position: relative;
     align-items: center;
@@ -137,9 +279,15 @@ div.card{
     flex-flow: column nowrap;
     padding: 1px 1px;
     border-radius: 3px;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.194);
-    width: 18.4%;
-    height: 431px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.162);
+    width: 18%;
+    height: 500px;
+}
+
+div.card:hover{
+    transform: scale(1.09);
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.162);
+    transition: .1s;
 }
 
 div.image{
@@ -150,16 +298,129 @@ div.image{
     background-position: center center;
     width: 100%;
     border-radius: 3px 3px 0px 0px;
-    height: 250px;
+    height: 50%;
+    transition-delay: 3s;
+    transition: all 5s;
 }
 
-div.aboutProduct{
-    letter-spacing: 0.3px;
+div.image2{
     position: relative;
-    font-size: 1em;
+    background-image: url(/images/Sofa-moderno.jpg);
+    width: 100%;
+    height: 50%;
+    background-size: cover;
+    background-position: center;
+    transition-delay: 3s;
+    transition: all 5s;
+}
+
+div.image2:hover{
+    position: relative;
+    background-image: url(/images/Sofa-Confortavel.jpg);
+    width: 100%;
+    height: 50%;
+    background-size: cover;
+    transition: all 3.5s;
+    background-position: bottom;
+}
+
+div.image3{
+    position: relative;
+    background-image: url(/images/Mesa-Moderna.jpg);
+    width: 100%;
+    height: 50%;
+    background-size: cover;
+    background-position: center;
+    transition-delay: 3s;
+    transition: all 5s;
+}
+
+div.image3:hover{
+    position: relative;
+    background-image: url(/images/mesa-jantar-outro-Angulo.jpg);
+    width: 100%;
+    height: 50%;
+    background-size: cover;
+    transition: all 3.5s;
+    background-position: center;
+}
+
+div.image4{
+    position: relative;
+    background-image: url(/images/Mesa-Eletrica-Moderna.jpg);
+    width: 100%;
+    height: 50%;
+    background-size: cover;
+    background-position: center;
+    transition-delay: 3s;
+    transition: all 5s;
+}
+
+div.image4:hover{
+    position: relative;
+    background-image: url(/images/Mesa-Eletrica-Moderna-Abaixada.jpg);
+    width: 100%;
+    height: 50%;
+    background-size: cover;
+    transition: all 3.5s;
+    background-position: bottom;
+}
+
+
+div.image5{
+    position: relative;
+    background-image: url(../images/Mesa-De-Cozinha.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    border-radius: 3px 3px 0px 0px;
+    height: 50%;
+    transition-delay: 3s;
+    transition: all 5s;
+}
+
+div.image5:hover{
+    position: relative;
+    background-image: url(/images/Bancada\ de\ cozinha\ moderna\ e\ funcional\ em\ branco\ brilhante\,\ vista\ de\ outro\ ângulo.png);
+    width: 100%;
+    height: 50%;
+    background-size: cover;
+    transition: all 3.5s;
+    background-position: bottom;
+}
+
+div.image6{
+    position: relative;
+    background-image: url(../images/PoltronaConfortavel.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    border-radius: 3px 3px 0px 0px;
+    height: 50%;
+    transition: all 5s;
+}
+
+div.image6:hover{
+    position: relative;
+    background-image: url(../images/poltronaConfortavelOutroAngulo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    border-radius: 3px 3px 0px 0px;
+    height: 50%;
+    transition: all 5s;
+}
+
+div.aboutProduct > p{
+    color: var(--rodapeECabeçalho);
+    font-weight: 500;
+    font-size: 1.1em;
     text-align: justify;
-    padding: 10px;
-    line-height: 23px;
+    line-height: 25px;
+    padding: 7px;
 }
 
 div.aboutProduct > h2 {
@@ -167,48 +428,63 @@ div.aboutProduct > h2 {
     text-align: left;
 }
 
+
+
 div#sobre {
     display: flex;
-    justify-content:flex-start;
+    justify-content:center;
     align-items: center;
     flex-flow: row nowrap;
     text-align: justify;
     color: var(--primaryColor);
-    letter-spacing: 1px;
     background-color: var(--fontColor);
     border-radius: 7px;
     width: 95%;
-    height: 32%;
-    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.172);
+    min-height: 80vh;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.162);
     margin-bottom: 20px;
     padding: 10px;
+
 }
 
-div.LeftPart > h1 {
-    font-size: 30px;
+h1#sobreH1{
+    padding: 10px;
     text-align: center;
+    margin-top: 30px;
+    width: 100%;
 }
+
+
+h1 {
+    font-size: 2.3em;
+}
+
 
 div.LeftPart{
     display: flex;
     flex-flow: column nowrap;
-    line-height: 30px;
+    line-height: 25px;
+    letter-spacing: 1px;
     font-weight: 5;
     letter-spacing: 1px;
-    width: 50%;
+    width: 45%;
+    gap: 20px;
     padding-left: 10px;
+    margin-right: 30px;
 }
 
 div.RightPart{
-    background-image: url(../images/poltronaLuxo.jpg);
+    background-image: url(../images/ImagemSobre.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: bottom;
     margin-left: 10px;
     padding: 10px;
     width: 50%;
-    height: 200px;
+    height: 85vh;
     border-radius: 3px;
 }
+
 
 .linkAncora {
     color: white;
@@ -223,7 +499,7 @@ div.RightPart{
 .linkAncora:hover {
     transform: translateY(-3px);
     transition: all 0.5s;
-    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.274);
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.162);
 }
 
 
@@ -240,14 +516,21 @@ div.RightPart{
 }
 
 
-div.ContactUs{
+div#ContactUs{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.162);
     padding: 10px;
     width: 95%;
+    min-height: 80vh;
     border-radius: 3px;
+}
+
+h1.contatoh1{
+    text-align: center;
+    margin-top: 50px;
+    width: 100%;
 }
 
 div.PersonalInformation{
@@ -256,6 +539,9 @@ div.PersonalInformation{
     align-items: center;
     flex-flow: column nowrap;
     gap: 6px;
+    font-family: "Roboto", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 div.PersonalInformation > input {
@@ -274,6 +560,7 @@ div.PersonalInformation > textarea {
     border-radius: 5px;
     border: none;
     border: 1px solid black;
+
 }
 
 
@@ -283,22 +570,39 @@ div.moreInfoContact{
     align-items: center;
     flex-flow: column wrap;
     gap: 10px;
+    width: 40%;
+    line-height: 20px;
+   
 }
 
-h1.SuportH1{
-    text-align: center;
-    margin: 10px;
+div.moreInfoContact > h3 {
+    font-family: "Roboto", serif;
+    font-weight: 700;
+    font-style: normal;
 }
 
-div.Suporte{
+div.moreInfoContact > p {
+    font-family: "Roboto", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+div#Suporte{
     display: flex;
     justify-content: space-around;
     align-items: center;
     margin: auto;
     width: 95%;
     height: 210px;
+    min-height: 40vh;
     border-radius: 3px;
-    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.293);
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.162);
+    margin-bottom: 20px;
+}
+
+h1.SuportH1{
+    text-align: center;
+    margin: 10px;
 }
 
 div.FAQ{
@@ -309,9 +613,14 @@ div.FAQ{
     gap: 10px;
     line-height: 16px;
     width: 30%;
-    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.177);
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.162);
     padding-bottom: 30px;
-    height: 160px;
+    height: 250px;
+}
+
+div.FAQ > p{
+    line-height: 25px;
+    letter-spacing: 1px;
 }
 
 div.ChatOnline{
@@ -323,29 +632,46 @@ div.ChatOnline{
     width: 30%;
     text-align: justify;
     padding: 20px;
-    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.177);
-    height: 160px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.162);
+    height: 250px;
+}
+
+div.ChatOnline > p{
+    line-height: 25px;
+    letter-spacing: 1px;
 }
 
 div.CentralAjuda{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    gap: 10px;
     width: 30%;
-    height: 155px;
-    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.177);
+    height: 250px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.162);
     padding: 20px;
+}
+
+div.CentralAjuda > p {
+    line-height: 25px;
+    letter-spacing: 1px;
 }
 
 footer.rodape {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-flow: row wrap;
+    min-width: 100vh;
     gap: 10px;
-    background-color: var(--primaryColor);
+    background-color: var(--rodapeECabeçalho);
     color: var(--fontColor);
     padding: 15px;
     text-align: center;
     bottom: 0;
 }
+
 
 div.Living{
     display: flex;
@@ -354,6 +680,12 @@ div.Living{
     flex-flow: column;
     gap: 20px;
     width: 30%;
+    flex:1;
+}
+
+div.Living > p{
+    line-height: 25px;
+    letter-spacing: 1px;
 }
 
 div.fastLinks {
@@ -363,15 +695,36 @@ div.fastLinks {
     flex-flow: column;
     gap: 15px;
     width: 30%;
+    flex:1;
 }
 
-div.Contato {
+div.fastLinks > a {
+    text-decoration: none;
+    color: #FFFFFF;
+    cursor: pointer;
+    background-color: var(--rodapeECabeçalho);
+    padding: 7px;
+    border-radius: 5px;
+    border: 1px solid var(--texto);
+    width: 80px;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+div#Contato {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex:1;
     flex-flow: column;
     gap: 15px;
     width: 30%;
+}
+
+div#Contato > p {
+    line-height: 25px;
+    letter-spacing: 1px;
 }
 
 div#containRedesSociais{
@@ -381,13 +734,44 @@ div#containRedesSociais{
     flex-flow: column;
     gap: 15px;
     width: 30%;
+    flex:1;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 
+
+a.linkAncoraRedesSociais{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    color: white;
+    padding: 7px;
+    width: 125px;
+} 
+
+a.linkAncoraRedesSociais:hover{
+    background-color: #ffffff5a;
+    transition: all 0.6s;
+    border-radius: 5px;
+    border: 2px solid white;
+    padding: 7px;
+    transform: translateY(-3px);
+}
+
+img.RedesSociais{
+    width: 30px;
+}
+
+
 p.Copy{
+    width: 100vw;
+    padding: 10px;
     font-size: 20px;
-    background-color: var(--primaryColor);
-    color: var(--fontColor);
+    background-color: var(--rodapeECabeçalho);
+    color: var(--texto);
     padding: 15px;
     text-align: center;
-    bottom: 0;
+    margin: auto;
 }
