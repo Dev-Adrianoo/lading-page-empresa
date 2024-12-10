@@ -248,7 +248,7 @@ div#Home{
     flex-flow: column nowrap;
     gap: 15px;
     border-radius: 3px;
-    width: 100vw;
+    max-width: 100vw;
     min-height: 100vh;
     color: var(--fontColor);
 }
@@ -586,7 +586,7 @@ div.RightPart{
 
 .linkAncora1 {
     margin-top: 10px;
-    width: 270px;
+    width: 190px;
     color: white;
     text-decoration: none;
     background-color: var(--backgroundBotão);
@@ -603,7 +603,7 @@ div.RightPart{
 
 .linkAncora2 {
     margin-top: 10px;
-    width: 270px;
+    width: 190px;
     color: white;
     text-decoration: none;
     background-color: var(--backgroundBotão);
@@ -619,7 +619,7 @@ div.RightPart{
 
 .linkAncora3 {
     margin-top: 33px;
-    width: 270px;
+    width: 190px;
     color: white;
     text-decoration: none;
     background-color: var(--backgroundBotão);
@@ -635,7 +635,7 @@ div.RightPart{
 
 .linkAncora4 {
     margin-top: 12px;
-    width: 270px;
+    width: 190px;
     color: white;
     text-decoration: none;
     background-color: var(--backgroundBotão);
@@ -651,7 +651,7 @@ div.RightPart{
 
 .linkAncora5 {
     margin-top: 59px;
-    width: 270px;
+    width: 190px;
     color: white;
     text-decoration: none;
     background-color: var(--backgroundBotão);
