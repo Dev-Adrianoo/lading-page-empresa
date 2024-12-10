@@ -6,6 +6,13 @@ revelar.reveal('.efeito-texto-topo',{
     distance: '90px'
 });
 
+revelar.reveal('.efeito-texto-ToqueFinal',{
+    duration: 2000,
+    distance: '90px',
+    origin: 'right'
+});
+
+
 revelar.reveal('.efeito-imagem-topo',{
     duration: 2000,
     distance: '90px',
