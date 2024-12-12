@@ -63,6 +63,8 @@ button {
     color: var(--texto);
     width: 200px;
     margin-top: 30px;
+    font-size: 15px;
+    font-weight: 600;
 }
 
 button:hover {
@@ -248,7 +250,7 @@ div#Home{
     flex-flow: column nowrap;
     gap: 15px;
     border-radius: 3px;
-    width: 100vw;
+    max-width: 100vw;
     min-height: 100vh;
     color: var(--fontColor);
 }
@@ -536,7 +538,7 @@ div#sobre {
     background-color: var(--variaçãoPrincipal);
     border-radius: 7px;
     width: 95%;
-    min-height: 80vh;
+    height: 95vh;
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.162);
     margin-bottom: 20px;
     padding: 10px;
@@ -555,7 +557,6 @@ h1 {
     font-size: 2.3em;
 }
 
-
 div.LeftPart{
     display: flex;
     flex-flow: column nowrap;
@@ -571,17 +572,101 @@ div.LeftPart{
     font-style: normal;
 }
 
-div.RightPart{
-    background-image: url(../images/ImagemSobre.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom;
-    margin-left: 10px;
-    padding: 10px;
+section.slider{
+    margin: 0 auto;
     width: 50%;
     height: 85vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 !important;
+    overflow: hidden;
+}
+
+div.RightPart{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 300%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    transition: transform 1s ease-in-out;
     border-radius: 3px;
 }
+
+div.RightPart input{
+    display: none;
+}
+
+div.slide-box{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    flex-shrink: 0;
+    text-align: center;
+    overflow: hidden;
+    transition: 1s ease-in-out;
+}
+
+div.slide-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 5px;
+}
+
+div.nav-Manual, .nav-Auto{
+    position: absolute;
+    width: 100%;
+    margin-left: 40%;
+    margin-top: 85%;
+    display: flex;
+    justify-content: center;
+}
+
+div.nav-Manual .manual-btn, .nav-Auto div{
+    border: 2px solid var(--texto);
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+div.nav-Manual .manual-btn:not(:last-child), .nav-Auto div:not(:last-child){
+    margin-right: 15px;
+
+}
+
+div.nav-Manual .manual-btn:hover{
+    background-color: var(--BordaCards);
+}
+
+#radio1:checked ~ .nav-Auto .auto-btn1{
+    background: var(--BordaCards);
+}
+
+#radio2:checked ~ .nav-Auto .auto-btn2{
+    background: var(--BordaCards);
+}
+
+#radio3:checked ~ .nav-Auto .auto-btn3{
+    background: var(--BordaCards);
+}
+
+#radio1:checked ~ .primeiro{
+    margin-left: 0%;
+}
+
+#radio2:checked ~ .primeiro{
+    margin-left: -100%;
+}
+
+#radio3:checked ~ .primeiro{
+    margin-left: -200%;
+}
+
 
 
 .linkAncora1 {
@@ -592,9 +677,9 @@ div.RightPart{
     background-color: var(--backgroundBotão);
     padding: 10px;
     border-radius: 4px;
-    font-size: 13px;
     font-family: "Roboto", serif;
-    font-weight: 400;
+    font-size: 17px;
+    font-weight: 500;
     font-style: normal;
     animation: button 3s ease infinite;
     margin-bottom: 5px;
@@ -609,9 +694,9 @@ div.RightPart{
     background-color: var(--backgroundBotão);
     padding: 10px;
     border-radius: 4px;
-    font-size: 13px;
     font-family: "Roboto", serif;
-    font-weight: 400;
+    font-size: 17px;
+    font-weight: 500;
     font-style: normal;
     animation: button 3s ease infinite;
     margin-bottom: 5px;
@@ -625,9 +710,9 @@ div.RightPart{
     background-color: var(--backgroundBotão);
     padding: 10px;
     border-radius: 4px;
-    font-size: 13px;
     font-family: "Roboto", serif;
-    font-weight: 400;
+    font-size: 17px;
+    font-weight: 500;
     font-style: normal;
     animation: button 3s ease infinite;
     margin-bottom: 5px;
@@ -641,9 +726,9 @@ div.RightPart{
     background-color: var(--backgroundBotão);
     padding: 10px;
     border-radius: 4px;
-    font-size: 13px;
+    font-size: 17px;
     font-family: "Roboto", serif;
-    font-weight: 400;
+    font-weight: 500;
     font-style: normal;
     animation: button 3s ease infinite;
     margin-bottom: 5px;
@@ -657,9 +742,9 @@ div.RightPart{
     background-color: var(--backgroundBotão);
     padding: 10px;
     border-radius: 4px;
-    font-size: 13px;
+    font-size: 17px;
     font-family: "Roboto", serif;
-    font-weight: 400;
+    font-weight: 500;
     font-style: normal;
     animation: button 3s ease infinite;
     margin-bottom: 5px;
@@ -709,11 +794,12 @@ h1.contatoh1{
 }
 
 div.PersonalInformation{
+    position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     flex-flow: column nowrap;
-    gap: 6px;
+    gap: 35px;
     border: 1px solid black;
     border-radius: 5px;
     padding: 20px;
@@ -726,12 +812,114 @@ div.PersonalInformation{
     border: 2px solid rgba(255, 255, 255, 0.156);
 }
 
+div.PersonalInformation h3 {
+    margin-bottom: 20px;
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: bolder;
+}
+
 div.PersonalInformation > input {
     width: 500px;
     padding: 10px;
     border-radius: 5px;
     border: none;
-    border: 1px solid black;
+}
+
+div.input_text{
+    position: relative;
+    transition: 0.10s ease-in-out;
+}
+
+div.input_text input{
+    outline: none;
+    color: var(--texto);
+    border: 1px solid var(--texto);
+    box-shadow: 1px 1px 1px 1px rgba(240, 248, 255, 0.354);
+    background-color: transparent;
+    border-radius: 3px;
+    padding: 10px 10px;
+    font-size: 14px;
+    width: 480px;
+    transition: 0.5s ease-in-out;
+}
+
+div.input_text span {
+    color: var(--texto);
+    padding: 0 3px;
+    position: absolute;
+    background-color: var(--variaçãoPrincipal);
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    z-index: -1;
+    font-size: 13px;
+    transition: 0.3s ease-in-out;
+}
+
+div.input_text input:focus,
+div.input_text input:valid{
+    border: 1px solid var(--texto);
+}
+
+div.input_text input:focus ~ span,
+div.input_text input:valid ~ span{
+    color: var(--texto);
+    border-right: 1px solid var(--texto);
+    border-left: 1px solid var(--texto);
+    font-size: 13px;
+    top: 0;
+    z-index: 1;
+    transition: 0.5s ease-in-out;
+}
+
+
+div.input_text{
+    position: relative;
+    transition: 0.10s ease-in-out;
+}
+
+div.input_text textarea{
+    outline: none;
+    color: var(--texto);
+    border: 1px solid var(--texto);
+    box-shadow: 1px 1px 1px 1px rgba(240, 248, 255, 0.354);
+    background-color: transparent;
+    border-radius: 3px;
+    padding: 10px 10px;
+    font-size: 14px;
+    width: 480px;
+    height: 100px;
+    transition: 0.5s ease-in-out;
+    resize: none;
+}
+
+div.input_text span {
+    color: var(--texto);
+    padding: 0 3px;
+    position: absolute;
+    background-color: var(--variaçãoPrincipal);
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    z-index: -1;
+    font-size: 13px;
+    transition: 0.3s ease-in-out;
+}
+
+div.input_text textarea:focus,
+div.input_text textarea:valid{
+    border: 1px solid var(--texto);
+}
+
+div.input_text textarea:focus ~ span,
+div.input_text textarea:valid ~ span{
+    color: var(--texto);
+    font-size: 13px;
+    top: 0;
+    z-index: 1;
+    transition: 0.5s ease-in-out;
 }
 
 
@@ -744,7 +932,6 @@ div.PersonalInformation > textarea {
     border: 1px solid black;
 
 }
-
 
 div.moreInfoContact{
     display: flex;
@@ -1024,7 +1211,6 @@ a.linkAncoraRedesSociais{
     font-style: normal;
     font-weight: normal;
 } 
-
 
 a.linkAncoraRedesSociais:hover{
     background: linear-gradient(135deg, #555353, #6b6969);
