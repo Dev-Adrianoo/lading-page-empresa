@@ -61,21 +61,21 @@ button {
     border-radius: 5px;
     background-color: #555353;
     color: var(--texto);
-    width: 200px;
+    width: 210px;
     margin-top: 30px;
     font-size: 15px;
     font-weight: 600;
+    transition: 0.5s ease-in-out;
 }
 
 button:hover {
         background: linear-gradient(135deg, #555353, #6b6969);
         color: #fff;
-        transform: scale(1.03); 
+        transform: scale(1.03);
         box-shadow: 0 4px 10px rgba(212, 175, 55, 0.3); 
         border: 1px solid rgba(212, 175, 55, 0.5); 
         transition: all 0.3s ease-in-out;
 }
-
 
 body{
     overflow: auto;
@@ -385,7 +385,7 @@ div.card{
 div.card:hover{
     transform: scale(1.09);
     box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.162);
-    transition: .1s;
+    transition: .3;
 }
 
 div.image{
@@ -397,8 +397,7 @@ div.image{
     width: 100%;
     border-radius: 3px 3px 0px 0px;
     height: 50%;
-    transition-delay: 3s;
-    transition: all 5s;
+    transition: 0.3;
 }
 
 div.image2{
@@ -408,8 +407,7 @@ div.image2{
     height: 50%;
     background-size: cover;
     background-position: center;
-    transition-delay: 3s;
-    transition: all 5s;
+    transition: 0.3;
 }
 
 div.image2:hover{
@@ -418,7 +416,7 @@ div.image2:hover{
     width: 100%;
     height: 50%;
     background-size: cover;
-    transition: all 3.5s;
+    transition: all 0.3;
     background-position: bottom;
 }
 
@@ -429,8 +427,7 @@ div.image3{
     height: 50%;
     background-size: cover;
     background-position: center;
-    transition-delay: 3s;
-    transition: all 5s;
+    transition:  0.3;
 }
 
 div.image3:hover{
@@ -450,8 +447,7 @@ div.image4{
     height: 50%;
     background-size: cover;
     background-position: center;
-    transition-delay: 3s;
-    transition: all 5s;
+    transition: all 0.3s;
 }
 
 div.image4:hover{
@@ -474,8 +470,7 @@ div.image5{
     width: 100%;
     border-radius: 3px 3px 0px 0px;
     height: 50%;
-    transition-delay: 3s;
-    transition: all 5s;
+    transition:  0.3s;
 }
 
 div.image5:hover{
@@ -933,15 +928,23 @@ div.PersonalInformation > textarea {
 
 }
 
+div.PersonalInformation > button{
+    width: 250px;
+}
+
+div.PersonalInformation > button:hover{
+    transform: scale(1.09);
+}
+
 div.moreInfoContact{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: column wrap;
     gap: 10px;
-    width: 40%;
-    line-height: 20px;
-   
+    width: 30%;
+    line-height: 1.7em;
+    text-align: justify;
 }
 
 div.moreInfoContact > h3 {
@@ -1040,6 +1043,17 @@ div.ChatOnline > p{
     font-style: normal;
 }
 
+div.ChatOnline > button {
+    width: 250px;
+    transition: 0.4 ease-in-out;
+}
+
+div.ChatOnline > button:hover {
+    transform: scale(1.09);
+}
+
+
+
 div.CentralAjuda{
     display: flex;
     justify-content: center;
@@ -1052,6 +1066,15 @@ div.CentralAjuda{
     padding: 20px;
     background-color: var(--variaçãoSecundaria);
 }
+
+div.CentralAjuda > button {
+    width: 250px;
+}
+
+div.CentralAjuda > button:hover {
+    transform: scale(1.09);
+}
+
 
 div.CentralAjuda > h4 {
     font-family: "Cinzel", serif;
@@ -1162,6 +1185,8 @@ div#Contato {
     gap: 15px;
     width: 30%;
 }
+
+
 
 div#Contato > h3 {
     font-family: "Cinzel", serif;
