@@ -1,6 +1,34 @@
 window.revelar = ScrollReveal({reset:true}) 
 
-//TOPO SITE
+var radio = document.querySelector('.manual-btn')
+var count = 1;
+
+document.getElementById('radio1').checked = true;
+
+
+document.getElementById("BotaoAumentar").addEventListener("click", function(){
+    document.body.style.fontSize = "18px";
+})
+
+document.getElementById("BotaoDiminuir").addEventListener("click", function(){
+    document.body.style.fontSize = "14px";
+
+})
+
+setInterval(() =>{
+    nextImg()
+}, 5000)
+
+function nextImg(){
+    count++;
+
+    if(count > 3){
+        count = 1;
+    }
+
+    document.getElementById('radio' + count).checked = true;
+}
+
 revelar.reveal('.efeito-texto-topo',{
     duration: 2000,
     distance: '90px'

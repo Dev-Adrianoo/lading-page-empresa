@@ -21,8 +21,8 @@
                 <a href="#Suporte">Suporte</a>
             </nav>
             <div class="FontSize">
-                <button type="button" class="botaoFontSizePlus ic--round-plus">Aumentar fonte</button>
-                <button type="button" class="botaoFontSizeRemove ic--round-remove">Diminuir fonte</button>
+                <button type="button" class="botaoFontSizePlus ic--round-plus" id="BotaoAumentar">Aumentar fonte</button>
+                <button type="button" class="botaoFontSizeRemove ic--round-remove" id="BotaoDiminuir">Diminuir fonte</button>
             </div>
         </header>
         <section id="main">
@@ -32,7 +32,7 @@
                 </div>
                 <p class="fontSpecial efeito-texto-ToqueFinal">O Toque Final para Seu Lar dos Sonhos</p>
             </div>
-            <h1 class="imoveisH1 efeito-texto-topo TitulosCor">Móbiliario em Destaque</h1>
+            <h1 class="imoveisH1 efeito-texto-topo TitulosCor">Mobiliário em Destaque</h1>
             <div id="imoveisDestaque"">
                 <div class="card efeito-card1">
                     <div class="image4"></div>
@@ -100,17 +100,57 @@
                     </ul>
                     <p>Châteu Living:<strong> Sua escolha para um lar com personalidade e requinte.</strong></p>
                 </div>
-                 <div class="RightPart efeito-imagem-sobre"></div>
+                 <section class="slider">
+                     <div class="RightPart efeito-imagem-sobre">
+
+                     <input type="radio" name="bnt-radio" id="radio1">
+                     <input type="radio" name="bnt-radio" id="radio2">
+                     <input type="radio" name="bnt-radio" id="radio3">
+
+                     <div class="slide-box primeiro">
+                        <img src="images/ImagemSobre.jpg" alt="Slide 1">   
+                     </div>
+
+                     <div class="slide-box">
+                        <img src="images/Carrossel-image.jpg" alt="Slide 2">   
+                     </div>
+
+                     <div class="slide-box">
+                        <img src="images/CarrosselImage3.webp"  alt="Slide 3">   
+                     </div>
+
+                     <div class="nav-Auto">
+                        <div class="auto-btn1"></div>
+                        <div class="auto-btn2"></div>
+                        <div class="auto-btn3"></div>
+                        </div>
+
+                    <div class="nav-Manual">
+                        <label for="radio1" class="manual-btn"></label>
+                        <label for="radio2" class="manual-btn"></label>
+                        <label for="radio3" class="manual-btn"></label>
+                    </div> 
+
+                     </div>
+                    </div>
+                 </section>
             </div>
             <h1 class="contatoh1 efeito-texto-topo TitulosCor" id="smoothScroll">Contato</h1>
             <div id="ContactUs" class="efeito-texto-topo">
                 <div class="PersonalInformation">
-                    <label for="Iname">Nome</label>
-                    <input type="text" name="name" id="Iname">
-                    <label for="Iemail">E-Mail</label>
-                    <input type="email" name="email" id="Iemail">
-                    <label for="Imensagem">Mensagem</label>
-                    <textarea name="mensagem" id="Imensagem" maxlength="100"></textarea>
+                    <h3>Informações para Contato</h3>
+                    <div class="input_text">
+                        <input type="text" required>
+                        <span>Seu Nome</span>
+                    </div>
+                    <div class="input_text">
+                        <input type="email" required>
+                        <span>Seu E-Mail</span>
+                    </div>
+                    <div class="input_text">
+                        <textarea name="mensagem" id="Imensagem" maxlength="100"></textarea>
+                        <span>Sua Mensagem</span>
+                    </div>
                     <button type="submit">Enviar Mensagem</button>
                 </div>
                 <div class="moreInfoContact">
