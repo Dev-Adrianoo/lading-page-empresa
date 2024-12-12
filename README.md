@@ -20,6 +20,8 @@ Este projeto foi desenvolvido para promover Mobília de luxo, criando uma experi
 - **CSS**
 - **JavaScript**
 
+## site hospedado no versel : https://landingpagechateuliving.vercel.app/ 
+
 ## 📂 Estrutura do Projeto
 
 ```plaintext
