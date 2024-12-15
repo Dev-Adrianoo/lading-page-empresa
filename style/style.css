@@ -369,7 +369,7 @@ div.card{
     position: relative;
     display: flex;
     background-color: var(--variaçãoSecundaria);
-    color: var(--);
+    color: var(--texto);
     text-align: center;
     position: relative;
     align-items: center;
@@ -378,14 +378,14 @@ div.card{
     padding: 1px 1px;
     border-radius: 3px;
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.162);
-    width: 18%;
+    width: 20%;
     height: 500px;
 }
 
 div.card:hover{
     transform: scale(1.09);
-    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.162);
-    transition: .3;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.041);
+    transition: .03s;
 }
 
 div.image{
@@ -396,7 +396,7 @@ div.image{
     background-position: center center;
     width: 100%;
     border-radius: 3px 3px 0px 0px;
-    height: 50%;
+    height:50%;
     transition: 0.3;
 }
 
@@ -407,17 +407,16 @@ div.image2{
     height: 50%;
     background-size: cover;
     background-position: center;
-    transition: 0.3;
+    border-radius: 3px 3px 0px 0px;
+    transition: 0.3s;
 }
 
 div.image2:hover{
-    position: relative;
     background-image: url(/images/Sofa-Confortavel.jpg);
-    width: 100%;
-    height: 50%;
-    background-size: cover;
-    transition: all 0.3;
-    background-position: bottom;
+    transition: 0.5 ease-in-out;
+    background-position: center;
+    transform: scale(1.03);
+    border-radius: 3px;
 }
 
 div.image3{
@@ -425,19 +424,18 @@ div.image3{
     background-image: url(/images/Mesa-Moderna.jpg);
     width: 100%;
     height: 50%;
+    border-radius: 3px 3px 0px 0px;
     background-size: cover;
     background-position: center;
-    transition:  0.3;
+    transition: 0.3s;
 }
 
 div.image3:hover{
-    position: relative;
     background-image: url(/images/mesa-jantar-outro-Angulo.jpg);
-    width: 100%;
-    height: 50%;
-    background-size: cover;
-    transition: all 3.5s;
     background-position: center;
+    transition: 0.5s ease-in-out;
+    transform: scale(1.03);
+    border-radius: 3px;
 }
 
 div.image4{
@@ -445,18 +443,17 @@ div.image4{
     background-image: url(/images/Mesa-Eletrica-Moderna.jpg);
     width: 100%;
     height: 50%;
+    border-radius: 3px 3px 0px 0px;
     background-size: cover;
     background-position: center;
-    transition: all 0.3s;
+    transition: 0.3s;
 }
 
 div.image4:hover{
-    position: relative;
     background-image: url(/images/Mesa-Eletrica-Moderna-Abaixada.jpg);
-    width: 100%;
-    height: 50%;
-    background-size: cover;
-    transition: all 3.5s;
+    transition: 0.5s ease-in-out;
+    transform: scale(1.03);
+    border-radius: 3px;
     background-position: bottom;
 }
 
@@ -467,20 +464,17 @@ div.image5{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    border-radius: 3px 3px 0px 0px;
     width: 100%;
     border-radius: 3px 3px 0px 0px;
     height: 50%;
-    transition:  0.3s;
 }
 
 div.image5:hover{
-    position: relative;
     background-image: url(/images/Bancada\ de\ cozinha\ moderna\ e\ funcional\ em\ branco\ brilhante\,\ vista\ de\ outro\ ângulo.png);
-    width: 100%;
-    height: 50%;
-    background-size: cover;
-    transition: all 3.5s;
-    background-position: bottom;
+    transition: 0.5s ease-in-out;
+    transform: scale(1.03);
+    border-radius: 3px;
 }
 
 div.image6{
@@ -492,19 +486,15 @@ div.image6{
     width: 100%;
     border-radius: 3px 3px 0px 0px;
     height: 50%;
-    transition: all 5s;
 }
 
 div.image6:hover{
-    position: relative;
     background-image: url(../images/poltronaConfortavelOutroAngulo.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
     width: 100%;
-    border-radius: 3px 3px 0px 0px;
     height: 50%;
-    transition: all 5s;
+    transition: 0.5s ease-in-out;
+    transform: scale(1.03);
+    border-radius: 3px;
 }
 
 div.aboutProduct > p{
@@ -520,8 +510,6 @@ div.aboutProduct > h2 {
     margin: 5px;
     text-align: left;
 }
-
-
 
 div#sobre {
     display: flex;
@@ -753,21 +741,6 @@ div.nav-Manual .manual-btn:hover{
     border: 1px solid rgba(212, 175, 55, 0.5); 
     transition: all 0.3s ease-in-out;
 }
-
-
-/* @keyframes button {
-    0%{
-        background-color: var(--variaçãoPrincipal);
-    }
-    50% {
-        background-color: var(--variaçãoSecundaria);
-    }
-    100% {
-        background-color: var(--variaçãoPrincipal);
-    }
-}
-*/
-
 
 div#ContactUs{
     display: flex;
